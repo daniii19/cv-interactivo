@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/cv-interactivo/static/css/main.395515a4.css",
+    "main.js": "/cv-interactivo/static/js/main.725abae2.js",
+    "static/js/453.ecdd84b4.chunk.js": "/cv-interactivo/static/js/453.ecdd84b4.chunk.js",
+    "static/media/Foto DNI.jpg": "/cv-interactivo/static/media/Foto DNI.71e337d3daaf9a7e01a7.jpg",
+    "static/media/logo.png": "/cv-interactivo/static/media/logo.98f8439f880dac7e4671.png",
+    "index.html": "/cv-interactivo/index.html",
+    "main.395515a4.css.map": "/cv-interactivo/static/css/main.395515a4.css.map",
+    "main.725abae2.js.map": "/cv-interactivo/static/js/main.725abae2.js.map",
+    "453.ecdd84b4.chunk.js.map": "/cv-interactivo/static/js/453.ecdd84b4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.395515a4.css",
+    "static/js/main.725abae2.js"
+  ]
+}
