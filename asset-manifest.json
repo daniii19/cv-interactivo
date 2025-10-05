@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/cv-interactivo/static/css/main.893e34cd.css",
-    "main.js": "/cv-interactivo/static/js/main.3b6a9bd2.js",
+    "main.css": "/cv-interactivo/static/css/main.5db5270f.css",
+    "main.js": "/cv-interactivo/static/js/main.28c6df99.js",
     "static/js/453.ecdd84b4.chunk.js": "/cv-interactivo/static/js/453.ecdd84b4.chunk.js",
     "static/media/Foto DNI.jpg": "/cv-interactivo/static/media/Foto DNI.71e337d3daaf9a7e01a7.jpg",
+    "static/media/bandera-españa.png": "/cv-interactivo/static/media/bandera-españa.c8fa299076b402b4a24a.png",
+    "static/media/bandera-inglesa.png": "/cv-interactivo/static/media/bandera-inglesa.0aa6281200ed7fa84198.png",
     "static/media/logo.png": "/cv-interactivo/static/media/logo.98f8439f880dac7e4671.png",
     "index.html": "/cv-interactivo/index.html",
-    "main.893e34cd.css.map": "/cv-interactivo/static/css/main.893e34cd.css.map",
-    "main.3b6a9bd2.js.map": "/cv-interactivo/static/js/main.3b6a9bd2.js.map",
+    "main.5db5270f.css.map": "/cv-interactivo/static/css/main.5db5270f.css.map",
+    "main.28c6df99.js.map": "/cv-interactivo/static/js/main.28c6df99.js.map",
     "453.ecdd84b4.chunk.js.map": "/cv-interactivo/static/js/453.ecdd84b4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.893e34cd.css",
-    "static/js/main.3b6a9bd2.js"
+    "static/css/main.5db5270f.css",
+    "static/js/main.28c6df99.js"
   ]
 }
