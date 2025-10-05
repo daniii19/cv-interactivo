@@ -7,6 +7,7 @@ import Education from './components/education';
 import Projects from './components/projects';
 import ContactSection from './components/ContactSection';
 import Switch from './components/Switch';
+import Idiom from './components/Idiom';
 // import ContactForm from "./components/ContactForm";
 // import Skills from './components/skills';
 
@@ -15,6 +16,7 @@ function App() {
   const [activeSection, setActiveSection] = useState('about');
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [language, setLanguage] = useState('es');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,6 +57,26 @@ function App() {
 
   const toggleTheme = () => {
     setIsDarkMode((prev) => !prev);
+  };
+
+  // Traducciones
+  const navLabels = {
+    es: {
+      about: 'Perfil',
+      experience: 'Experiencia',
+      skills: 'Certificaciones',
+      education: 'Formación',
+      projects: 'Proyectos',
+      contact: 'Contacto',
+    },
+    en: {
+      about: 'Profile',
+      experience: 'Experience',
+      skills: 'Certifications',
+      education: 'Education',
+      projects: 'Projects',
+      contact: 'Contact',
+    },
   };
 
 
@@ -102,15 +124,11 @@ function App() {
                       : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
                   }`}
                 >
-                  {section === 'about' ? 'Perfil' : 
-                  section === 'experience' ? 'Experiencia' :
-                  section === 'skills' ? 'Certificaciones' :
-                  section === 'education' ? 'Formación' :
-                  section === 'projects' ? 'Proyectos' :
-                  'Contacto'}
+                  {navLabels[language][section]}
                 </button>
               ))}
               <Switch isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+              <Idiom language={language} setLanguage={setLanguage} />
             </div>
           </div>
         </div>
@@ -131,41 +149,37 @@ function App() {
                     : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
                 }`}
               >
-                {section === 'about' ? 'Perfil' : 
-                section === 'experience' ? 'Experiencia' :
-                section === 'skills' ? 'Certificaciones' :
-                section === 'education' ? 'Formación' :
-                section === 'projects' ? 'Proyectos' :
-                'Contacto'}
+                {navLabels[language][section]}
               </button>
             ))}
-            <div className="px-4">
+            <div className="flex items-center justify-between px-4 pt-3 border-t border-gray-200 dark:border-gray-700">
               <Switch isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+              <Idiom language={language} setLanguage={setLanguage} />
             </div>
           </div>
         )}
       </nav>
 
       {/* Hero Section */}
-      <HeroSection scrollToSection={scrollToSection} />
+      <HeroSection scrollToSection={scrollToSection} language={language} />
 
       {/* About Section */}
-      <AboutSection />
+      <AboutSection language={language} />
 
       {/* Experience Section */}
-      <Experience />
+      <Experience language={language} />
 
       {/* Certifications */}
-      <Certifications />
+      <Certifications language={language} />
 
       {/* Education Section */}
-      <Education />
+      <Education language={language} />
 
       {/* Projects Section */}
-      <Projects />
+      <Projects language={language} />
 
       {/* Contact Section */}
-      <ContactSection />
+      <ContactSection language={language} />
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8">

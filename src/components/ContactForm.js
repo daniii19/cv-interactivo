@@ -1,7 +1,7 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
 
-export default function ContactForm() {
+export default function ContactForm({ language }) {
   const [status, setStatus] = useState(null);
 
   const handleSubmit = (e) => {
@@ -31,7 +31,7 @@ export default function ContactForm() {
       <input
         type="text"
         name="name"
-        placeholder="Tu Nombre"
+        placeholder={language === "es" ? "Tu Nombre" : "Your Name"}
         className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-blue-200 focus:outline-none focus:border-white/40 transition-colors duration-200"
         required
       />
@@ -39,7 +39,7 @@ export default function ContactForm() {
       <input
         type="email"
         name="email"
-        placeholder="Tu Email"
+        placeholder={language === "es" ? "Tu Email" : "Your Email"}
         className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-blue-200 focus:outline-none focus:border-white/40 transition-colors duration-200"
         required
       />
@@ -47,7 +47,7 @@ export default function ContactForm() {
       <input
         type="text"
         name="subject"
-        placeholder="Asunto"
+        placeholder={language === "es" ? "Asunto" : "Subject"}
         className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-blue-200 focus:outline-none focus:border-white/40 transition-colors duration-200"
         required
       />
@@ -55,25 +55,31 @@ export default function ContactForm() {
       <textarea
         name="message"
         rows={5}
-        placeholder="Tu Mensaje"
+        placeholder={language === "es" ? "Tu Mensaje" : "Your Message"}
         className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-blue-200 focus:outline-none focus:border-white/40 transition-colors duration-200 resize-none"
         required
       ></textarea>
 
-<button
-  type="submit"
-  className="w-full bg-white text-blue-900 dark:bg-gray-900 dark:text-white font-medium py-3 px-6 rounded-lg hover:bg-blue-200 dark:hover:bg-gray-800 transition-colors duration-200"
->
-  Enviar Mensaje
-</button>
+      <button
+        type="submit"
+        className="w-full bg-white text-blue-900 dark:bg-gray-900 dark:text-white font-medium py-3 px-6 rounded-lg hover:bg-blue-200 dark:hover:bg-gray-800 transition-colors duration-200"
+      >
+        {language === "es" ? "Enviar Mensaje" : "Send Message"}
+      </button>
 
-      {/* Mensaje de estado */}
+      {/* Mensaje de enviado */}
       {status === "success" && (
-        <p className="text-green-400 mt-2">✅ ¡Mensaje enviado con éxito!</p>
+        <p className="text-green-400 mt-2">
+          {language === "es"
+            ? "✅ ¡Mensaje enviado con éxito!"
+            : "✅ Message sent successfully!"}
+        </p>
       )}
       {status === "error" && (
         <p className="text-red-400 mt-2">
-          ❌ Ocurrió un error al enviar el mensaje. Inténtalo más tarde.
+          {language === "es"
+            ? "❌ Ocurrió un error al enviar el mensaje. Inténtalo más tarde."
+            : "❌ An error occurred while sending your message. Please try again later."}
         </p>
       )}
     </form>

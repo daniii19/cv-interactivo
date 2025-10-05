@@ -1,7 +1,7 @@
 import { Award } from "lucide-react";
 import { certifications } from "../data/certifications";
 
-export default function Certifications() {
+export default function Certifications({ language }) {
   return (
     <section
       id="skills"
@@ -10,11 +10,14 @@ export default function Certifications() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Cursos y Certificaciones
+            {language === "es"
+              ? "Cursos y Certificaciones"
+              : "Courses and Certifications"}
           </h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
         </div>
 
+        {/* Lista de certificaciones */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {certifications.map((cert, index) => (
             <div
@@ -24,7 +27,9 @@ export default function Certifications() {
               <div className="flex items-center gap-3">
                 <Award className="text-blue-600" size={20} />
                 <span className="text-gray-700 dark:text-gray-200 font-medium">
-                  {cert}
+                  {language === "es"
+                    ? cert.title
+                    : cert.title_en || cert.title}
                 </span>
               </div>
             </div>

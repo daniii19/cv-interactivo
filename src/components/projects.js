@@ -1,7 +1,7 @@
 import logo from "../assets/img/logo.png";
 import { projects } from "../data/projects";
 
-export default function Projects() {
+export default function Projects({ language }) {
   return (
     <section
       id="projects"
@@ -10,17 +10,19 @@ export default function Projects() {
       <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Proyectos Destacados
+            {language === "es" ? "Proyectos Destacados" : "Featured Projects"}
           </h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
         </div>
 
+        {/* Lista de proyectos */}
         <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
               className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group"
             >
+              {/* Logo */}
               <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden">
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -28,14 +30,18 @@ export default function Projects() {
                 </div>
               </div>
 
+              {/* Contenido */}
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                  {project.title}
+                  {language === "es" ? project.title : project.title_en}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
-                  {project.description}
+                  {language === "es"
+                    ? project.description
+                    : project.description_en}
                 </p>
 
+                {/* Tecnologías */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, techIndex) => (
                     <span
@@ -47,16 +53,18 @@ export default function Projects() {
                   ))}
                 </div>
 
-                {/* Botón para ver proyecto (si decides activarlo) */}
-                {/* <a
+                {/* Botón para ver el proyecto */}
+                {/* 
+                <a
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline font-medium transition-colors duration-200"
                 >
-                  Ver Proyecto
+                  {language === "es" ? "Ver Proyecto" : "View Project"}
                   <ExternalLink size={16} />
-                </a> */}
+                </a> 
+                */}
               </div>
             </div>
           ))}
@@ -65,34 +73,3 @@ export default function Projects() {
     </section>
   );
 }
-
-
-// import logo from '../assets/img/logo.png';
-// import { projects } from "../data/projects";
-// import Card from './Card';
-
-// export default function Projects() {
-//   return (
-//     <section id="projects" className="py-20 bg-white">
-//       <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
-//         <div className="text-center mb-16">
-//           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-//             Proyectos Destacados
-//           </h2>
-//           <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
-//         </div>
-
-//         <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-8 justify-items-center">
-//           {projects.map((project, index) => (
-//             <Card
-//               key={index}
-//               title={project.title}
-//               description={project.description}
-//               technologies={project.technologies}
-//             />
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }

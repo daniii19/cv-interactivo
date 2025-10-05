@@ -1,23 +1,26 @@
 import { Mail, Phone, MapPin, Linkedin as LinkedIn, Github, ChevronDown } from "lucide-react";
 import foto from "../assets/img/Foto DNI.jpg";
 
-export default function HeroSection({ scrollToSection }) {
+export default function HeroSection({ scrollToSection, language }) {
   return (
     <section className="mt-10 pt-20 pb-16 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center gap-12">
+          {/* Texto principal */}
           <div className="flex-1 text-center lg:text-left">
             <div className="mb-6">
               <h1 className="text-4xl lg:text-6xl font-bold mb-4 leading-tight">
                 Daniel Gayol Rodríguez
               </h1>
               <p className="text-xl lg:text-2xl text-blue-200 mb-6">
-                Técnico Superior en Desarrollo de Aplicaciones Web
+                {language === "es"
+                  ? "Técnico Superior en Desarrollo de Aplicaciones Web"
+                  : "Higher Technician in Web Application Development"}
               </p>
               <p className="text-lg text-blue-100 max-w-2xl">
-                Desarrollador de aplicaciones web con formación en frontend y backend, 
-                apasionado por la tecnología y el aprendizaje continuo. Capaz de trabajar 
-                en equipo, con buena gestión del tiempo.
+                {language === "es"
+                  ? "Desarrollador de aplicaciones web con formación en frontend y backend, apasionado por la tecnología y el aprendizaje continuo. Capaz de trabajar en equipo, con buena gestión del tiempo."
+                  : "Web application developer trained in frontend and backend, passionate about technology and continuous learning. Team-oriented with strong time management skills."}
               </p>
             </div>
 
@@ -39,7 +42,7 @@ export default function HeroSection({ scrollToSection }) {
               </a>
               <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg">
                 <MapPin size={18} />
-                Gijón, Asturias
+                {language === "es" ? "Gijón, Asturias" : "Gijón, Asturias"}
               </div>
             </div>
 
@@ -70,7 +73,7 @@ export default function HeroSection({ scrollToSection }) {
           <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-white/20 shadow-lg">
             <img
               src={foto}
-              alt="Foto de Daniel Gayol Rodríguez"
+              alt={language === "es" ? "Foto de Daniel Gayol Rodríguez" : "Photo of Daniel Gayol Rodríguez"}
               className="w-full h-full object-cover"
             />
           </div>
@@ -83,6 +86,7 @@ export default function HeroSection({ scrollToSection }) {
           size={32}
           className="mx-auto animate-bounce cursor-pointer hover:text-blue-200 transition-colors"
           onClick={() => scrollToSection("about")}
+          title={language === "es" ? "Desplázate hacia abajo" : "Scroll down"}
         />
       </div>
     </section>
