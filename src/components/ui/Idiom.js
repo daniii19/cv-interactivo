@@ -1,6 +1,6 @@
 import React from "react";
-import esFlag from "../assets/img/bandera-españa.png";
-import enFlag from "../assets/img/bandera-inglesa.png";
+import esFlag from "../../assets/img/bandera-españa.png";
+import enFlag from "../../assets/img/bandera-inglesa.png";
 
 function Idiom({ language, setLanguage }) {
   return (

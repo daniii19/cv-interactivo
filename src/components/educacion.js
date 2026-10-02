@@ -1,8 +1,8 @@
 import { GraduationCap } from "lucide-react";
-import { education } from "../data/education";
+import { educacion } from "../data/educacion";
 import clsx from "clsx";
 
-export default function Education({ language }) {
+export default function Educacion({ language }) {
   return (
     <section
       id="education"
@@ -18,10 +18,10 @@ export default function Education({ language }) {
 
         {/* Lista de estudios */}
         <div className="grid md:grid-cols-2 gap-8">
-          {education.map((item, index) => (
+          {educacion.map((item, index) => (
             <div
               key={index}
-              className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200"
+              className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-lg dark:hover:shadow-blue-500/25 dark:hover:ring-1 dark:hover:ring-blue-500/40 transition-shadow duration-200"
             >
               <div className="flex items-start gap-4">
                 <div
@@ -67,7 +67,7 @@ export default function Education({ language }) {
                     {language === "es" ? item.institution : item.institution_en}
                   </p>
                   <p className="text-gray-500 dark:text-gray-400 text-sm mb-3">
-                    {item.years}
+                    {language === "es" ? item.years : item.years_en || item.years}
                   </p>
                   <p className="text-gray-600 dark:text-gray-300">
                     {language === "es" ? item.description : item.description_en}

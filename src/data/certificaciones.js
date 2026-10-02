@@ -1,4 +1,8 @@
-export const certifications = [
+export const certificaciones = [
+  {
+    title: "Generative AI Practitioner - AWS Skill Builder",
+    title_en: "Generative AI Practitioner - AWS Skill Builder",
+  },
   {
     title: "HTML5 y CSS3 - OpenWebinars",
     title_en: "HTML5 & CSS3 - OpenWebinars",
@@ -14,10 +18,6 @@ export const certifications = [
   {
     title: "Spring Boot - OpenWebinars",
     title_en: "Spring Boot - OpenWebinars",
-  },
-  {
-    title: "Thymeleaf - OpenWebinars",
-    title_en: "Thymeleaf - OpenWebinars",
   },
   {
     title: "Prevención de Riesgos Laborales - Básico",

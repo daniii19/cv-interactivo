@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import HeroSection from './components/HeroSection';
-import AboutSection from './components/aboutSection';
-import Experience from "./components/experiences";
-import Certifications from './components/certifications';
-import Education from './components/education';
-import Projects from './components/projects';
-import ContactSection from './components/ContactSection';
-import Switch from './components/Switch';
-import Idiom from './components/Idiom';
+import Introduccion from './components/introduccion';
+import PerfilProfesional from './components/perfilProfesional';
+import Experiencia from "./components/experiencia";
+import Habilidades from './components/habilidades';
+import Certificaciones from './components/certificaciones';
+import Educacion from './components/educacion';
+import Proyectos from './components/proyectos';
+import Contacto from './components/contacto';
+import Switch from './components/ui/Switch';
+import Idiom from './components/ui/Idiom';
 // import ContactForm from "./components/ContactForm";
-// import Skills from './components/skills';
 
 
 function App() {
@@ -64,7 +64,7 @@ function App() {
     es: {
       about: 'Perfil',
       experience: 'Experiencia',
-      skills: 'Certificaciones',
+      skills: 'Habilidades',
       education: 'Formación',
       projects: 'Proyectos',
       contact: 'Contacto',
@@ -72,7 +72,7 @@ function App() {
     en: {
       about: 'Profile',
       experience: 'Experience',
-      skills: 'Certifications',
+      skills: 'Skills',
       education: 'Education',
       projects: 'Projects',
       contact: 'Contact',
@@ -81,7 +81,7 @@ function App() {
 
 
   return (
-   <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
       {/* Navegacion */}
       <nav className="fixed top-0 w-full bg-white/95 dark:bg-gray-900 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 z-50 transition-colors duration-300">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -118,11 +118,10 @@ function App() {
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
-                  className={`capitalize transition-colors duration-200 ${
-                    activeSection === section 
-                      ? 'text-blue-600 dark:text-blue-400 font-medium' 
-                      : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
-                  }`}
+                  className={`capitalize transition-colors duration-200 ${activeSection === section
+                    ? 'text-blue-600 dark:text-blue-400 font-medium'
+                    : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+                    }`}
                 >
                   {navLabels[language][section]}
                 </button>
@@ -143,11 +142,10 @@ function App() {
                   scrollToSection(section);
                   setMobileMenuOpen(false);
                 }}
-                className={`block w-full text-left capitalize py-2 px-4 rounded transition-colors duration-200 ${
-                  activeSection === section 
-                    ? 'text-blue-600 dark:text-blue-400 font-medium' 
-                    : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
-                }`}
+                className={`block w-full text-left capitalize py-2 px-4 rounded transition-colors duration-200 ${activeSection === section
+                  ? 'text-blue-600 dark:text-blue-400 font-medium'
+                  : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+                  }`}
               >
                 {navLabels[language][section]}
               </button>
@@ -160,26 +158,29 @@ function App() {
         )}
       </nav>
 
-      {/* Hero Section */}
-      <HeroSection scrollToSection={scrollToSection} language={language} />
+      {/* Introduccion Section */}
+      <Introduccion scrollToSection={scrollToSection} language={language} />
 
-      {/* About Section */}
-      <AboutSection language={language} />
+      {/* PerfilProfesional Section */}
+      <PerfilProfesional language={language} />
 
-      {/* Experience Section */}
-      <Experience language={language} />
+      {/* Experiencia Section */}
+      <Experiencia language={language} />
 
-      {/* Certifications */}
-      <Certifications language={language} />
+      {/* Habilidades técnicas */}
+      <Habilidades language={language} />
 
-      {/* Education Section */}
-      <Education language={language} />
+      {/* Certificaciones */}
+      <Certificaciones language={language} />
 
-      {/* Projects Section */}
-      <Projects language={language} />
+      {/* Educacion Section */}
+      <Educacion language={language} />
 
-      {/* Contact Section */}
-      <ContactSection language={language} />
+      {/* Proyectos Section */}
+      <Proyectos language={language} />
+
+      {/* Contacto Section */}
+      <Contacto language={language} />
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8">

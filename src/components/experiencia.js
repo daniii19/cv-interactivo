@@ -1,7 +1,7 @@
 import { Briefcase, Calendar } from "lucide-react";
-import { experiences } from "../data/experiences";
+import { experiencia } from "../data/experiencia";
 
-export default function Experience({ language }) {
+export default function Experiencia({ language }) {
   return (
     <section
       id="experience"
@@ -19,7 +19,7 @@ export default function Experience({ language }) {
         <div className="relative">
           <div className="absolute left-4 lg:left-1/2 lg:transform lg:-translate-x-px h-full w-0.5 bg-gray-300 dark:bg-gray-700"></div>
 
-          {experiences.map((exp, index) => (
+          {experiencia.map((exp, index) => (
             <div
               key={index}
               className={`relative flex items-center mb-12 ${
@@ -35,7 +35,7 @@ export default function Experience({ language }) {
                   index % 2 === 0 ? "lg:pr-12" : "lg:pl-12"
                 }`}
               >
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200">
+                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg dark:hover:shadow-blue-500/25 dark:hover:ring-1 dark:hover:ring-blue-500/40 transition-shadow duration-200">
                   <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-2">
                     <Calendar size={16} />
                     {language === "es"

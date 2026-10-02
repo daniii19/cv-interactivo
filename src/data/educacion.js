@@ -1,4 +1,4 @@
-export const education = [
+export const educacion = [
   {
     title: "Curso de Especialización en Inteligencia Artificial y Big Data",
     title_en: "Specialization Course in Artificial Intelligence and Big Data",
@@ -8,7 +8,8 @@ export const education = [
     institution_en:
       "IES Doctor Fleming, Oviedo",
 
-    years: "2025 - 2026",
+    years: "2025 - Junio 2026",
+    years_en: "2025 - June 2026",
 
     description:
       "Formación especializada en inteligencia artificial y big data, incluyendo aprendizaje automático y el uso de herramientas y entornos de Big Data para la toma de decisiones inteligentes.",

@@ -1,7 +1,7 @@
 import { Mail, Phone, MapPin, Linkedin as LinkedIn, Github } from "lucide-react";
-import ContactForm from "./ContactForm";
+import ContactForm from "./ui/ContactForm";
 
-export default function ContactSection({ language }) {
+export default function Contacto({ language }) {
   return (
     <section
       id="contact"

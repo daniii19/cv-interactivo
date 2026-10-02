@@ -1,11 +1,11 @@
 import { Award } from "lucide-react";
-import { certifications } from "../data/certifications";
+import { certificaciones } from "../data/certificaciones";
 
-export default function Certifications({ language }) {
+export default function Certificaciones({ language }) {
   return (
     <section
       id="skills"
-      className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300"
+      className="pb-20 bg-white dark:bg-gray-900 transition-colors duration-300"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
@@ -19,7 +19,7 @@ export default function Certifications({ language }) {
 
         {/* Lista de certificaciones */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {certifications.map((cert, index) => (
+          {certificaciones.map((cert, index) => (
             <div
               key={index}
               className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg border-l-4 border-blue-600 transition-colors duration-300"

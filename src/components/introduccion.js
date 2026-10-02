@@ -1,7 +1,7 @@
 import { Mail, Phone, MapPin, Linkedin as LinkedIn, Github, ChevronDown } from "lucide-react";
 import foto from "../assets/img/Foto DNI.jpg";
 
-export default function HeroSection({ scrollToSection, language }) {
+export default function Introduccion({ scrollToSection, language }) {
   return (
     <section className="mt-10 pt-20 pb-16 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,13 +14,13 @@ export default function HeroSection({ scrollToSection, language }) {
               </h1>
               <p className="text-xl lg:text-2xl text-blue-200 mb-6">
                 {language === "es"
-                  ? "Técnico Superior en Desarrollo de Aplicaciones Web"
-                  : "Higher Technician in Web Application Development"}
+                  ? "Full Stack Developer | IA, Big Data y Automatización"
+                  : "Full Stack Developer | AI, Big Data & Automation"}
               </p>
               <p className="text-lg text-blue-100 max-w-2xl">
                 {language === "es"
-                  ? "Desarrollador de aplicaciones web con formación en frontend y backend, apasionado por la tecnología y el aprendizaje continuo. Capaz de trabajar en equipo, con buena gestión del tiempo."
-                  : "Web application developer trained in frontend and backend, passionate about technology and continuous learning. Team-oriented with strong time management skills."}
+                  ? "Técnico Superior en Desarrollo de Aplicaciones Web con especialización en IA y Big Data. Experiencia full stack con React, Java y Spring Boot, proyectos de machine learning con Python y primeros pasos en automatización de procesos con n8n."
+                  : "Higher Technician in Web Application Development with a specialization in AI and Big Data. Full stack experience with React, Java and Spring Boot, machine learning projects with Python and first steps in process automation with n8n."}
               </p>
             </div>
 
@@ -38,7 +38,7 @@ export default function HeroSection({ scrollToSection, language }) {
                 className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-colors duration-200"
               >
                 <Phone size={18} />
-                (+34) 617-748-386
+                (+34) 617 74 83 86
               </a>
               <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg">
                 <MapPin size={18} />

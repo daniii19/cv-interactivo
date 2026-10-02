@@ -1,3 +1,0 @@
-Para subirlo a Github Pages, hay un script automático:
-
-    npm run update
